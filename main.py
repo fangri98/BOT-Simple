@@ -6,15 +6,14 @@ print("BOT FANG")
 
 
 while True:
-    user_input = int(input("""
-            --------Mau Mengobrol apa hari ini?--------
-                    1. Kalkulator
-                    2. Kalender
-                    3. Tebak Angka
-                    4. Keluar
-                       """))
     try:
-        user_input = int(user_input)
+        user_input = int(input("""
+                --------Mau Mengobrol apa hari ini?--------
+                        1. Kalkulator
+                        2. Kalender
+                        3. Tebak Angka
+                        4. Keluar
+                           """))
     except ValueError:
         print("Tolong masukkan dengan angka.")
         continue
@@ -28,7 +27,11 @@ while True:
             print("4. Bagi")
             print("5. Keluar")
 
-            choice = int(input("Masukkan pilihan (1/2/3/4/5): "))
+            try:
+                choice = int(input("Masukkan pilihan (1/2/3/4/5): "))
+            except ValueError:
+                print("Tolong masukkan angka yang valid.")
+                continue
             
             if choice == 5:
                 print("Terima kasih telah menggunakan kalkulator. Sampai jumpa!")
@@ -63,8 +66,12 @@ while True:
             print("2. Tampilkan tanggal sekarang")
             print("3. Keluar")
 
-            choice = int(input("Masukkan pilihan (1/2/3): "))
-            
+            try:
+                choice = int(input("Masukkan pilihan (1/2/3): "))
+            except ValueError:
+                print("Tolong masukkan angka yang valid.")
+                continue
+
             if choice == 3:
                 print("Terima kasih telah menggunakan kalender. Sampai jumpa!")
                 break
@@ -88,8 +95,12 @@ while True:
         attempts = 0
             
         while True:
-            guess = int(input("Masukkan tebakan anda(jika ingin keluar ketik 0): "))
-            
+            try:
+                guess = int(input("Masukkan tebakan anda(jika ingin keluar ketik 0): "))
+            except ValueError:
+                print("Tolong masukkan angka yang valid.")
+                continue
+
             if guess == 0:
                 print("Terima kasih telah bermain. Sampai jumpa!")
                 break
@@ -99,7 +110,7 @@ while True:
             except ValueError:
                 print("Tolong masukkan angka yang valid.")
                 continue
-            
+        
             attempts += 1
             
             if attempts >= 5:
