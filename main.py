@@ -12,7 +12,8 @@ while True:
                         1. Kalkulator
                         2. Kalender
                         3. Tebak Angka
-                        4. Keluar
+                        4. random pasword
+                        5. Keluar
                            """))
     except ValueError:
         print("Tolong masukkan dengan angka.")
@@ -128,7 +129,23 @@ while True:
                 attempts += 1
             else:
                 print("Tebakan anda terlalu tinggi. Coba lagi!")
-
     elif user_input == 4:
+        print("Selamat datang di generator password acak!")
+        while True:
+            try:
+                length = int(input("Masukkan panjang password yang diinginkan: "))
+                if length <= 0:
+                    print("panjang password harus lebih dari 0.")
+                    continue
+            except ValueError:
+                print("Tolong masukkan angka yang valid.")
+                continue
+            
+            characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*"
+            password = "".join(rd.choice(characters) for _ in range(length))
+            print(f"Password acak yang dihasilkan: {password}")
+            break
+
+    elif user_input == 5:
         print("Terima kasih telah menggunakan BOT FANG. Sampai jumpa!")
         break
