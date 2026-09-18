@@ -8,7 +8,7 @@ print("BOT FANG")
 while True:
     try:
         user_input = int(input("""
-                --------Mau Mengobrol apa hari ini?--------
+                --------Mau Menanyakan apa hari ini?--------
                         1. Kalkulator
                         2. Kalender
                         3. Tebak Angka
@@ -18,6 +18,7 @@ while True:
     except ValueError:
         print("Tolong masukkan dengan angka.")
         continue
+# INI ADALAH KALKULATOR
     if user_input == 1:
         print("Selamat datang di Kalkulator Sederhana!")
         while True:
@@ -58,7 +59,8 @@ while True:
                 break
             else:
                 print("pilihan tidak valid. silahkan coba lagi.")
-
+                
+# INI ADALAH KALENDER
     elif user_input == 2:
         print("Selamat datang di Kalender!")
         while True:
@@ -86,6 +88,8 @@ while True:
                 break
             else:
                 print("Pilihan tidak valid. Silahkan coba lagi.")
+                
+    # INI ADALAH PERMAINAN TEBAK ANGKA
     elif user_input == 3:
         print("Selamat datang di permainan Tebak Angka!")
 
@@ -129,6 +133,8 @@ while True:
                 attempts += 1
             else:
                 print("Tebakan anda terlalu tinggi. Coba lagi!")
+                
+    # INI ADALAH GENERATOR PASSWORD ACAK
     elif user_input == 4:
         print("Selamat datang di generator password acak!")
         while True:
@@ -146,6 +152,8 @@ while True:
             print(f"Password acak yang dihasilkan: {password}")
             break
 
+    # INI ADALAH UNTUK KELUAR
+    
     elif user_input == 5:
         print("Terima kasih telah menggunakan BOT FANG. Sampai jumpa!")
         break
