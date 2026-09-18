@@ -14,7 +14,7 @@ while True:
                         3. Tebak Angka
                         4. random pasword
                         5. Keluar
-                           """))
+                        Masukkan pilihan (1/2/3/4/5):  """))
     except ValueError:
         print("Tolong masukkan dengan angka.")
         continue
