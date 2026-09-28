@@ -2,12 +2,13 @@ import calculate as cal
 import time_date as td
 import random as rd
 
-print("BOT FANG")
+print("                    --------BOT FANG--------")
 
 
 while True:
     try:
         user_input = int(input("""
+                               
                 --------Mau Menanyakan apa hari ini?--------
                         1. Kalkulator
                         2. Kalender
@@ -157,3 +158,4 @@ while True:
     elif user_input == 5:
         print("Terima kasih telah menggunakan BOT FANG. Sampai jumpa!")
         break
+       
